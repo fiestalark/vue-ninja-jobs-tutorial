@@ -1,7 +1,10 @@
 <template>
   <nav>
+    <!-- Vue intercepts anything in router-link and doesnt send requests to server -->
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <!-- if use data binding and pass in object name for router link, 
+    can change route URL without having to change everywhere after -->
+    <router-link :to="{ name: 'about' }">About</router-link>
   </nav>
   <router-view/>
 </template>
@@ -22,9 +25,13 @@ nav {
 nav a {
   font-weight: bold;
   color: #2c3e50;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: white;
+  background: #99d194
 }
 </style>
