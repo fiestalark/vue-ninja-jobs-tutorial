@@ -4,7 +4,8 @@
     <router-link to="/">Home</router-link> |
     <!-- if use data binding and pass in object name for router link, 
     can change route URL without having to change everywhere after -->
-    <router-link :to="{ name: 'about' }">About</router-link>
+    <router-link :to="{ name: 'about' }">About</router-link> |
+    <router-link :to="{ name: 'jobs' }">Jobs</router-link>
   </nav>
   <router-view/>
 </template>
