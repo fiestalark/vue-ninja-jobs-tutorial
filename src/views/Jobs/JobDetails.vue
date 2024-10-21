@@ -1,9 +1,13 @@
 <template>
-  <h1>{{ job.title }}</h1>
-  <!-- The .id is whatever the parameter is called for that route on the index.js router -->
-  <p>The job id is {{ id }}</p>
-  <p>{{ job.details }}</p>
-
+<div v-if="job">
+    <h1>{{ job.title }}</h1>
+    <!-- The .id is whatever the parameter is called for that route on the index.js router -->
+    <p>The job id is {{ id }}</p>
+    <p>{{ job.details }}</p>
+</div>
+<div v-else>
+    <p>Loading job details..</p>
+</div>
 </template>
 
 <script>
